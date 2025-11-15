@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "updatertauri",
+  "version": "0.2.0",
+  "identifier": "com.pc.updatertauri",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1430",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Table Top",
+        "dragDropEnabled": true,
+        "center": true,
+        "minWidth": 1200,
+        "minHeight": 850,
+        "transparent": true,
+        "devtools": true,
+        "resizable": false,
+        "fullscreen": false,
+        "decorations": true,
+        "visible": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "createUpdaterArtifacts": true,
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "windows": {
+        "installMode": "basicUi"
+      },
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ3QzI4RjlBNTBCMDE3NkQKUldSdEY3QlFtby9DUjZqMWlta2ErTFRBQ0p5czRyaHpUQW84WHlENnErZjNXRkppT1hueDVTQlcK",
+      "endpoints": [
+        "https://gist.githubusercontent.com/kiwy-monzy/272b12e69c42ad7ef48876d728490af9/raw/46d22e18f0e073bf52feb273face5c58b0d32e09/latests.json"
+      ],
+      "dialog": true
+    }
+  }
+}
