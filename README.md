@@ -19,4 +19,4 @@ Environment variables used to sign:
 `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`  Your private key password (optional)
 
 set TAURI_SIGNING_PRIVATE_KEY=I:\updaterTauri\app.key
-set TAURI_SIGNING_PRIVATE_KEY_PASSWORD =tanzania
+set TAURI_SIGNING_PRIVATE_KEY_PASSWORD ="tanzania"
